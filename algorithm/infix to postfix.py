@@ -153,8 +153,8 @@ def infixToPostfix(tokenList):
             if opStack.isEmpty(): # 스택이 비어 있는 경우
                 opStack.push(token)
             
-            elif prec[opStack.peek()] >= prec[token]: # 스택보다 연산자 우선순위가 낮은 경우
-                while  not opStack.Empty() and prec[opStack.peek()] >= prec[token]: #### 반드시 비어있는지 먼저 확인 해야함. 여기서 런타임 오류 존나 났음.
+            elif prec[opStack.peek()] >= prec[token]: # 스택 가장 위에 있는 연산자 보다 연산자 우선순위가 낮은 경우
+                while  not opStack.Empty() and prec[opStack.peek()] >= prec[token]: #### 반드시 비어있는지 먼저 확인 해야함. 여기서 런타임 오류 났음.
                     postfixList.append(opStack.pop())
                 
                 else: ## while문 끝나고 마지막으로 넣어줘야함
