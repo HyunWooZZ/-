@@ -1,16 +1,14 @@
-# how to solve ?
 import sys
-n, k = map(int, sys.stdin.readline().split())
-count = 0
-while n >= k:
-    if n % k == 0:
-       n =  n // k
-       count += 1  
-    else:
-        n -= 1
-        count += 1
-else:
-    count += n - 1
-
-
-print(count)
+N, K = map(int, sys.stdin.readline().strip().split())
+cnt = 0
+while N > 1:
+  a, b = divmod(N, K)
+  if b != 0:
+    N -= b
+    cnt += b
+  else:
+    N = a
+    cnt += 1
+time_b = time.time()
+print(cnt)
+print(time_b - time_a)
