@@ -3,8 +3,7 @@ import sys
 
 N, M = map(int, input().split())
 icebox = []
-visited = [[False for _ in range(N)] for i in range(M)]
-for _ in range(M):
+for _ in range(N):
     icebox.append(list(map(int, sys.stdin.readline().split())))
 
 #### solution
