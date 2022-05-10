@@ -1,6 +1,3 @@
-from turtle import right
-
-
 def quicksort(array, start, end):
     #base case
     if start >= end:
@@ -25,6 +22,7 @@ def quicksort(array, start, end):
 
         quicksort(array, start, right-1)
         quicksort(array, right+1, end)
+        return array
 
 #########################################
 ######python스러운 코드로 퀵정렬을 구현하자######
