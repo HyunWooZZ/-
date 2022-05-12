@@ -65,11 +65,11 @@ remain = set(map(int, sys.stdin.readline().rstrip().split()))
 
 M = int(input())
 request = list(map(int, sys.stdin.readline().rstrip().split()))
-def find_part(remain, request):
+
+def find_part(remain: set, request: list) -> list[str]:
     answer = []
     for i in request:
         if i in remain:
             answer.append('yes')
-
         else:
             answer.append('no')
