@@ -17,4 +17,3 @@ def make_1(n):
     
     return d[n]
 
-print(make_1(26))
