@@ -1,5 +1,5 @@
 N = int(input())
-d = [None] * 31
+d = [None] * 30001
 def topdown(n: int, d: list[int]) -> int:
     if n == 1:
         d[1] = 0
@@ -20,7 +20,5 @@ def topdown(n: int, d: list[int]) -> int:
             d[n] = answer
             return d[n]
 
-
-
-print(topdown(30, d))
+print(topdown(N, d))
 
