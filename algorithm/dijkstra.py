@@ -27,7 +27,7 @@ def get_smallest_node(distance: list[int], visited: list[bool]) -> int:
         if distance[i] < min_value and not visited[i]:
             min_value = distance[i]
             index = i
-    return index
+        return index
     
 def dijkstra(start: int, graph: list[int], distance: list[int], visited: list[bool]):
     # 시작 노드에 대해서 초기화
@@ -47,16 +47,15 @@ def dijkstra(start: int, graph: list[int], distance: list[int], visited: list[bo
             # 갱신하려는 거리가 현재 구한 거리보다 작은 경우 갱신
             if cost < distance[j[0]]:
                 distance[j[0]] = cost
-    return distance
+                
+    return distance[1::]
 
 
 dist = dijkstra(start, graph, distance, visited)
 
 
-for i in dist[1::]:
+for i in dist:
     if i == INF:
         print("INF")
     else:
         print(i)
-
-
