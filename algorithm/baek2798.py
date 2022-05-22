@@ -9,7 +9,7 @@ for i in range(N-2):
         for k in range(j + 1, N, 1):
             temp = num_list[i] + num_list[j] + num_list[k]
 
-            if abs(M - temp) < difference and temp =< M:
+            if abs(M - temp) < difference and temp <= M:
                 difference = M - temp
                 answer = temp
 
