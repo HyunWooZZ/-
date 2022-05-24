@@ -18,7 +18,6 @@ def topdown(n: int, d: list[int]) -> int:
             if n % 5 == 0:
                 answer = min(answer, topdown(n//5, d)+1)  
             d[n] = answer
-            
             return d[n]
 print(topdown(N, d))
 
