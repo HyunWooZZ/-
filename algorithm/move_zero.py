@@ -20,7 +20,7 @@ def movezero(nums: list[int]):
                 if next < len(nums) and nums[next] != 0:
                     nums[now], nums[next] = nums[next], nums[now]
                     now = next
-                    next += 1
+                    next = now + 1
                     continue
                 
                 elif next < len(nums) and nums[next] == 0:
@@ -29,5 +29,5 @@ def movezero(nums: list[int]):
                     continue
                 
 
-
+    return nums
 
