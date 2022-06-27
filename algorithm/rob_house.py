@@ -1,6 +1,6 @@
 ## 198. House Robber 
 class Solution:
-    def rob(self, nums: List[int]) -> int:
+    def rob(self, nums: list[int]) -> int:
         length = len(nums)
         dp = [0 for i in range(length)]
         dp[0] = nums[0]
